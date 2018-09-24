@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import NavBar from './Navbar';
 import './Header.css';
 
 class Header extends Component {
@@ -8,25 +9,35 @@ class Header extends Component {
     if (this.props.authenticated) {
       return (
         <React.Fragment>
-          <Link to="/feature">Feature</Link>
-          <Link to="/signout">Sign Out</Link>
+          <Link className="navbar-item" to="/feature">
+            Feature
+          </Link>
+          <Link className="navbar-item" to="/signout">
+            Sign Out
+          </Link>
         </React.Fragment>
       );
     } else {
       return (
         <React.Fragment>
-          <Link to="/signup">Sign Up</Link>
-          <Link to="/signin">Sign In</Link>
+          <Link className="navbar-item" to="/signup">
+            Sign Up
+          </Link>
+          <Link className="navbar-item" to="/signin">
+            Sign In
+          </Link>
         </React.Fragment>
       );
     }
   }
   render() {
     return (
-      <div className="header">
-        <Link to="/">Redux Auth</Link>
+      <NavBar>
+        <Link className="navbar-item" to="/">
+          Home
+        </Link>
         {this.renderLinks()}
-      </div>
+      </NavBar>
     );
   }
 }

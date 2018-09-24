@@ -1,4 +1,4 @@
-import { AUTH_USER, AUTH_ERROR } from './types';
+import { AUTH_USER, AUTH_ERROR, TOGGLE_HAMBURGER } from './types';
 import axios from 'axios';
 
 export const signup = (formProps, callback) => async dispatch => {
@@ -40,5 +40,12 @@ export const signout = () => {
   return {
     type: AUTH_USER,
     payload: ''
+  };
+};
+
+export const toggleHamburger = boolean => {
+  return {
+    type: TOGGLE_HAMBURGER,
+    payload: boolean
   };
 };

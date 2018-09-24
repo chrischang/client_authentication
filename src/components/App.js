@@ -3,7 +3,7 @@ import Header from './Header';
 
 const App = ({ children }) => {
   return (
-    <div>
+    <div className="app-container">
       <Header />
       {children}
     </div>
