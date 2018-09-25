@@ -11,8 +11,8 @@ const Welcome = () => {
           voluptas impedit officia esse aliquid quam deserunt? Maxime nulla amet
           commodi obcaecati? Lorem ipsum dolor, sit amet consectetur adipisicing
         </h2>
+        <hr />
       </div>
-      <hr />
       <div class="tile is-ancestor">
         <div class="tile is-vertical is-8">
           <div class="tile">

@@ -13,6 +13,7 @@ import reduxThunk from 'redux-thunk';
 import Feature from './components/Feature';
 import Footer from './components/Footer';
 import './index.css';
+import ChartComponent from './components/stock';
 
 const store = createStore(
   reducers,
@@ -32,6 +33,7 @@ ReactDOM.render(
           <Route path="/signout" exact component={Signout} />
           <Route path="/signin" exact component={Signin} />
           <Route path="/feature" exact component={Feature} />
+          <Route path="/stock" exact component={ChartComponent} />
         </App>
         <Footer />
       </div>
